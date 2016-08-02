@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<style type="text/css" media="screen">
+	canvas{
+		border: 2px blue solid;
+	}
+</style>
+
+<canvas class="the-canvas" height="500px" width="1500px">
+	<!-- canvas is an empty palatte on which to draw -->
+	<!-- Our stuff is going to go here -->
+
+</canvas>
+
+<script type="text/javascript" charset="utf-8" async defer>
+	
+	var canvas = document.getElementsByClassName('the-canvas')[0];
+	var context = canvas.getContext('2d');
+
+	console.log(context);
+
+	context.beginPath();
+	// get ready to draw
+	context.moveTo(100,100); 
+	context.lineTo(200,200);
+	context.lineTo(300,100);
+	context.lineTo(100,200);
+	context.lineTo(300,150);
+	context.lineTo(100,100);
+	context.moveTo(500,200);
+	context.lineTo(300,500);
+	// context.strokeStyle = "#ff6600";
+	// context.stroke();
+
+	// draw a circle
+
+	context.beginPath();
+	// context.fillStyle = "#FFFF00"
+	context.arc(375,175,50, 0*Math.PI, 2*Math.PI);
+	// context.fill();
+
+	// function text(){
+	// 	context.beginPath();
+	// 	context.rect(300,20,200,100);
+	// 	context.scale(2,3);
+	// 	context.rect(300,20,200,100);
+	// 	context.stroke();
+	// 	context.strokeStyle = "ff0000";
+	// 	context.fill();
+	// 	context.fillStyle = "ff6600";
+	// }	
+
+	// var text = setInterval(text,40);
+
+	// context.beginPath();
+	// context.arc(300,150,50,0,2*Math.PI);
+	// context.stroke();
+	// context.fill();
+	
+	// context.beginPath();
+	// context.arc(500,150,50,0,2*Math.PI);
+	// context.stroke();
+	// context.fill();
+
+	var x = 300;
+	var xTwo = 500;
+	var xThree = 300;
+	var y = 300;
+	var radius = 30;
+	var endArc = 2;
+	var r = 0;
+	var g = 0;
+	var b = 0;
+
+	function wheelOne(){
+		context.beginPath();
+		context.rect(300,20,200,100);
+		context.stroke();
+		context.strokeStyle = "ff0000";
+		context.fillStyle = "#"+r+g+b;
+		context.beginPath();
+		context.clearRect(0,0,1500,500);
+		context.arc(x,y,radius,0,endArc*Math.PI);
+		context.arc(xTwo,y,radius,0,endArc*Math.PI);
+		context.rect(xThree,200,200,100);
+		context.fill();
+		x += 5;
+		xTwo += 5;
+		xThree += 5;
+		// y += 1;
+		radius += 0;
+		endArc += 0;
+		// r += 1;
+		// b += 1;
+		if(xTwo == 1500){
+			xTwo = 1500;
+			xTwo -= 100;
+		};
+		// if(x == 1500){
+		// 	xTwo += -3;
+		// };
+		// if(x == 1500){
+		// 	xThree += -3;
+		// };
+
+	}
+
+	
+
+	var ball = setInterval(wheelOne,40);
+	
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

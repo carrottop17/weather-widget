@@ -55,10 +55,10 @@ var currentTemp = 0;
 
 		var tempColor = "#ff0000";
 		context.strokeStyle = tempColor;
-		context.lineWidth = 10;
+		context.lineWidth = 20;
 
 		context.beginPath();
-		context.arc(155, 155, 60, Math.PI * 1.5, Math.PI*3);
+		context.arc(155, 155, 60, Math.PI * 1.5, Math.PI*3.5);
 		context.fillStyle = "#ddd";
 		context.fill();
 
@@ -67,7 +67,9 @@ var currentTemp = 0;
 		context.arc(155, 155, 70, Math.PI * 1.5, (current/100) * (Math.PI * 2) + (Math.PI * 1.5));
 		context.stroke();
 
-		context.fillText(currentTemp, 200, 200);
+		context.fillStyle = "#000"
+		context.fillText(currentTemp, 120, 170);
+		context.font = "30px Arial";
 
 		current++;
 		if(current < currentTemp){

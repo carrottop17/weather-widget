@@ -1,3 +1,11 @@
 body{
 	background-image: url("images/sunny.jpg");
 }
+.weather{
+	margin-top: 20px;
+	background-color: rgba(100,100,100,0.4);
+	border-radius: 25px;
+}
+.weather-form{
+	margin-top: 50px;
+}

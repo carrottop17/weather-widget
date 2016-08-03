@@ -22,19 +22,25 @@
 <body id="bodyImage">
 	<div class="container">
 			<div class="row">
-				<div class="col-sm-12 weather">
+				<div class="col-sm-4 weather">
 					<!-- <form class="weather-form">
 						<input type="text" name="city" class="city">
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form> -->
-					<h2>Current Weather</h2>
-					<form class="weather-form form-inline pull-xs-right">
+					<h2>Current Temperature</h2>
+					<form class="weather-form form-inline">
 		    			<input class="form-control city" type="text" name="city" placeholder="City">
 		    			<button class="btn btn-outline-success" type="submit">Submit</button>
 		  			</form>
-					<canvas id="current-temp" height="500px" width="500px">
+					<canvas id="current-temp" height="300px" width="300px">
 
 					</canvas>
+				</div>
+				<div class="col-sm-2">
+				</div>
+				<div class="col-sm-4 weather">
+					<h2>Current Conditions</h2>
+					<div class="icons"></div>
 				</div>
 			</div>
 		

@@ -2,10 +2,28 @@ body{
 	background-image: url("images/sunny.jpg");
 }
 .weather{
-	margin-top: 20px;
+	margin-top: 100px;
 	background-color: rgba(100,100,100,0.4);
 	border-radius: 25px;
+	height: 400px;
 }
 .weather-form{
 	margin-top: 50px;
+    text-align: center;
+    margin: auto;
+}
+h2{
+	text-align: center;
+}
+#current-temp{
+	margin-left: 20px;
+}
+img{
+	height: 100px;
+	width: 100px;
+	text-align: center;
+}
+.icons{
+	margin: auto;
+	width: 100px;
 }

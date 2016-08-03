@@ -45,6 +45,10 @@ var currentTemp = 0;
 			if(id == '9'){
 				$('#bodyImage').css("background-image", "url(images/windy.jpg)");  
 			}
+
+			icon = weatherData.list[0].weather[0].icon;
+			$('.icons').html('<img src="http://openweathermap.org/img/w/'+icon+'.png">')
+			console.log(icon);
 			animate(0);
 		});
 	});
